@@ -45,17 +45,22 @@ bool Postrack::updatePos(double acc){
 
 bool Postrack::calcTime(KinematicData &h){
 
-	h.diff = std::chrono::duration_cast<mis>(h.newtime - h.oldTime);
-	return true;
+	if (h.newtime > h.oldTime){
+		h.diff = std::chrono::duration_cast<mis>(h.newtime - h.oldTime);
+		return true;
+	}
+	else return false;
 }
 
 bool Postrack::calcPos(KinematicData &h){
 
-	h.actVel = this->getVel(h.diff.count(), h.initVel, h.acc);
-	h.trans_x = this->getMov(h.diff.count(), h.actVel);
-	h.pos_x += h.trans_x;
-
-	return true;
+	if (h.diff.count() > 0){
+		h.actVel = this->getVel(h.diff.count(), h.initVel, h.acc);
+		h.trans_x = this->getMov(h.diff.count(), h.actVel);
+		h.pos_x += h.trans_x;
+		return true;
+	}
+	else return false;
 }
 
 double Postrack::getVel(double time, double initVel, double acc){

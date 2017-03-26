@@ -34,5 +34,7 @@ private:
 	udp::endpoint remote_endpoint_;
 	boost::array<char, 1> recv_buffer_;
 
+	std::string data;
+
 };
 
