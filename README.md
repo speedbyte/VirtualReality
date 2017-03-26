@@ -1,0 +1,1 @@
+For UDP Server and Client boost library (boost_1_3_0) is needed.
