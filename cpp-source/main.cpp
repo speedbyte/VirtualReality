@@ -1,15 +1,33 @@
+#include <boost\lambda\lambda.hpp>
+#include <boost/thread.hpp>
 #include <stdio.h>
 #include <string>
 #include <chrono>
 #include <iostream>
 #include <thread>
-#include <windows.h>
+
+#include <iterator>
+#include <algorithm>
 
 
 #include "Postrack.h"
 #include "UDPConroller.h"
+#include "UDPClient.h"
+
+#include <windows.h>
 
 void main(){
+
+	boost::asio::io_service io_service;
+
+	boost::thread bt(boost::bind(&boost::asio::io_service::run, &io_service));
+
+	UDPClient client(io_service, "localhost", "1337");
+	UDPController server(io_service);
+
+	io_service.run();
+
+	client.send("Hello, World!");
 
 	Postrack* h = new Postrack();
 
@@ -35,4 +53,6 @@ void main(){
 	char x;
 
 	std::cin >> x;
+
+	io_service.stop();
 }
