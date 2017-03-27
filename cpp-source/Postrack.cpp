@@ -45,7 +45,7 @@ bool Postrack::updatePos(double acc){
 
 bool Postrack::calcTime(KinematicData &h){
 
-	if (h.newtime > h.oldTime){
+	if (h.newtime >= h.oldTime){
 		h.diff = std::chrono::duration_cast<mis>(h.newtime - h.oldTime);
 		return true;
 	}
@@ -54,7 +54,7 @@ bool Postrack::calcTime(KinematicData &h){
 
 bool Postrack::calcPos(KinematicData &h){
 
-	if (h.diff.count() > 0){
+	if (h.diff.count() >= 0){
 		h.actVel = this->getVel(h.diff.count(), h.initVel, h.acc);
 		h.trans_x = this->getMov(h.diff.count(), h.actVel);
 		h.pos_x += h.trans_x;

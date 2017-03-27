@@ -22,10 +22,12 @@ void main(){
 
 	boost::thread bt(boost::bind(&boost::asio::io_service::run, &io_service));
 
-	UDPClient client(io_service, "localhost", "1337");
+	UDPClient client(io_service, "localhost", "13");
 	UDPController server(io_service);
 
 	io_service.run();
+
+	std::this_thread::sleep_for(std::chrono::milliseconds(100));
 
 	client.send("Hello, World!");
 

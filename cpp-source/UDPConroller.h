@@ -15,11 +15,11 @@ public:
 	~UDPController();
 
 
-	void start_receive();
+	
 
 private:
 
-	
+	void start_receive();
 
 	void handle_receive(const boost::system::error_code& error,
 		std::size_t /*bytes_transferred*/);

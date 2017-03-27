@@ -9,7 +9,15 @@ using namespace std;
 
 UDPController::UDPController(boost::asio::io_service& io_service) : socket_(io_service, udp::endpoint(udp::v4(), 13))
 {
+
+	udp::resolver resolver(io_service);
+	udp::resolver::query query(udp::v4(), "localhost", "13");
+	udp::resolver::iterator iter = resolver.resolve(query);
+	remote_endpoint_ = *iter;
+
 	start_receive();
+
+	std::cout << "UDP Server started!" << std::endl;
 }
 
 
