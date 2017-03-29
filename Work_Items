@@ -1,0 +1,19 @@
+Hi all,
+
+It's Loc here. Now things are getting more clear for us, so I think we there are several work items we need to work on:
+
+1. Interfacing C++ code with VREP                                               => Markus has done this I think. Thanks!
+2. C++ and UDP communication                                                    => Markus has also done this. To do: Wait to test with the real data,
+                                                                                   problem could be in the data format. 
+3. Calculating xyz position from acceleration data (received by UDP)            => Im working on the dynamics of the quadcopter (quadcopter_dynamics.h file),
+                                                                                   all contribution are welcome. Due date: 07.04 
+4. Calculating angles of from gyroscope data (received by UDP)                  => Im working on the dynamics of the quadcopter (quadcopter_dynamics.h file),
+                                                                                   all contribution are welcome. Due date: 07.04
+5. Control algorithms of the quadcopter are not yet defined (how will           => Abraham, I think you can work on this... Comments are welcome :D. Due date 12.04 
+   it react to disturbances)                                                       (before Easter :D)
+6. Test (drag the quadcopter out of its position and see if it returns          => Team. Due date: 23.04
+   to the initial position)
+
+These are what I am able to think of at the moment. More will be discussed on Monday 03.04. If you guys can think of any items, please put it in the list here.
+
+Thank you all :D.
