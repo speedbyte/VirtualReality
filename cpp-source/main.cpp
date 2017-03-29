@@ -13,7 +13,7 @@
 #include "Postrack.h"
 #include "UDPConroller.h"
 #include "UDPClient.h"
-
+#include "quadcopter_dynamics.h"
 #include <windows.h>
 
 void main(){
