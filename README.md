@@ -15,9 +15,9 @@ The communication between the smartphone and the Simulink simulation goes via UD
 <table>
 <thead>
 <tr>
-<td>Tasks</td>
-<td>Details</td>
-<td>Done?</td>
+<td><strong>Tasks</strong></td>
+<td><strong>Details</strong></td>
+<td><strong>Done?</strong></td>
 </tr>
 </thead>
 <tbody>
