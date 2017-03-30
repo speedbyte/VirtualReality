@@ -80,6 +80,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Postrack.h" />
+    <ClInclude Include="quadcopter_dynamics.h" />
     <ClInclude Include="UDPClient.h" />
     <ClInclude Include="UDPConroller.h" />
   </ItemGroup>
