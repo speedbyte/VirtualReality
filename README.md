@@ -8,7 +8,7 @@ The virtual reality device is a android smartphone with google cardboard. A goog
 The communication between the smartphone and the Simulink simulation goes via UDP communication.&nbsp;</p>
 
 <h2>Architecture:</h2>
-![alt tag](https://gitlab.hs-esslingen.de/IT-Projekte-HElikopter/VirtualReality/edit/Masters2017/Architecture1.png)
+![alt tag](img/Architecture1.png)
 <p>-&nbsp;</p>
 
 <h2>Milestones and Tasks:</h2>
