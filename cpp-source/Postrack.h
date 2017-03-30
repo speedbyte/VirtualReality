@@ -20,7 +20,7 @@ public:
 	~Postrack();
 
 	/// Creates a new point (KinematicData) in the objects path and calculates the new position. Point pets pushed to path then.
-	bool updatePos(double acc);
+	bool updatePos(double accx, double accy, double accz, double rotx, double roty, double rotz);
 	
 	/// Returns the whole path in KinematicData objects
 	std::vector<KinematicData> getPath();
@@ -52,22 +52,31 @@ private:
 
 struct KinematicData
 {
-	int    typ;				// not in use atm - Achstyp translatorisch (TRANS_X, TRANS_Y, TRANS_Z) oder rotatorisch (ROT_X, ROT_Y, ROT_Z)
-	double trans_x = 0;     // Translation um trans_x in mm
-	double trans_y = 0;     // not in use atm - Translation um trans_y in mm
-	double trans_z = 0;     // not in use atm - Translation um trans_z in mm
-	double rot_x = 0;       // not in use atm - Rotation um rot_x in rad
-	double rot_y = 0;       // not in use atm - Rotation um rot_y in rad
-	double rot_z = 0;       // not in use atm - Rotation um rot_z in rad
+	KinematicData(){
+		for (int i = 0; i < 3; i++){
+			acc[i] = 0.0;
+			initVel[i] = 0.0;
+			actVel[i] = 0.0;
+		}
+	}
 
+	int    typ = 0;			// not in use atm - Achstyp translatorisch (TRANS_X, TRANS_Y, TRANS_Z) oder rotatorisch (ROT_X, ROT_Y, ROT_Z)
+	
 	std::chrono::steady_clock::time_point oldTime;
 	std::chrono::steady_clock::time_point newtime;
 	std::chrono::microseconds diff;
+	
+	double trans_x = 0;     // Translation um trans_x in mm
+	double trans_y = 0;     // Translation um trans_y in mm
+	double trans_z = 0;     // Translation um trans_z in mm
+	double rot_x = 0;       // Rotation um rot_x in rad
+	double rot_y = 0;       // Rotation um rot_y in rad
+	double rot_z = 0;       // Rotation um rot_z in rad
 
-	double acc = 0;			// Acceleration in mm/s²
-	double initVel = 0;		// Velocity in mm/s
-	double actVel = 0;		// Velocity in mm/s
-	double pos_x = 0;		// Position on x-axis in mm 
-	double pos_y = 0;		// not in use atm - Position on y-axis in mm
-	double pos_z = 0;		// not in use atm - Position on z-axis in mm
+	double acc[3];			// Acceleration in mm/s²
+	double initVel[3];		// Velocity in mm/s
+	double actVel[3];		// Velocity in mm/s
+	double pos_x = 0;					// Position on x-axis in mm 
+	double pos_y = 0;					// Position on y-axis in mm
+	double pos_z = 0;					// Position on z-axis in mm
 };

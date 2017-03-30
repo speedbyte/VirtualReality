@@ -14,9 +14,6 @@ public:
 
 	~UDPController();
 
-
-	
-
 private:
 
 	void start_receive();

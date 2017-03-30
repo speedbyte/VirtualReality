@@ -35,40 +35,40 @@ void main(){
 	// wait
 	std::this_thread::sleep_for(std::chrono::milliseconds(100));
 	
-	// only testing the client
+	// testing the client
 	client.send("Hello, World!");
 
 	// create new Postrack class
 	Postrack* h = new Postrack();
 
 	// simulate first package arriving
-	h->updatePos(10);
-
+	h->updatePos(10, 10, 10, 0.1, 0.2, 0.1);
 	// wait for some time...
 	std::this_thread::sleep_for(std::chrono::milliseconds(30));
 
 	// simulate second package arriving
-	h->updatePos(300);
+	h->updatePos(30, 2, 10, 0.02, 0.06, 0.1);
 	std::this_thread::sleep_for(std::chrono::milliseconds(40));
 
-	h->updatePos(40);
+	h->updatePos(40, 30, 35, 0.05, 0.16, 0.17);
 	std::this_thread::sleep_for(std::chrono::milliseconds(100));
 
-	h->updatePos(-100);
-	std::this_thread::sleep_for(std::chrono::microseconds(600));
-	h->updatePos(-50);
+	h->updatePos(-10, -10, -10, 0.2, 0.3, 0.2);
+	std::this_thread::sleep_for(std::chrono::milliseconds(60));
 
-	std::this_thread::sleep_for(std::chrono::milliseconds(10));
-	h->updatePos(-500);
-
-	std::this_thread::sleep_for(std::chrono::milliseconds(5));
-	h->updatePos(320);
+	h->updatePos(-50, -20, -30, 0.1, 0.3, 0.1);
+	std::this_thread::sleep_for(std::chrono::milliseconds(20));
+	
+	h->updatePos(-50, -50, -40, 0.15, 0.25, 0.35);
+	std::this_thread::sleep_for(std::chrono::milliseconds(50));
+	
+	h->updatePos(32, 15, 16, 0.02, 0.01, 0.1);
 
 	h->printPath();
 
 	char x;
 
-	// keeps te window open till you press any key and enter
+	// keeps the window open
 	std::cin >> x;
 
 	io_service.stop();
