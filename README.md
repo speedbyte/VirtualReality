@@ -1,5 +1,5 @@
 <!-- #######  #########-->
-<h1>Project to bring a Simulink based Quadrocopter-Model to Google Cardboard VR </h1>
+<h1>Project to bring a Simulink-based quadrocopter model to Google Cardboard VR </h1>
 <h2>Description:</h2>
 <p>A quadrocopter-model based on MATLAB/Simulink will be used to show the behaviour of a quadrocopter in a virtual reality environment. The control of the object will be the movement of the head.<br>
 
