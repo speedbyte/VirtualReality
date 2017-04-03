@@ -44,6 +44,11 @@ The communication between the smartphone and the Simulink simulation goes via UD
 <tr>
 <td>UDP connection</td>
 <td>Establish protocol based connection between Simulink model and C++ program</td>
+<td>Isn't this overlapped with the previous tasks</td>
+</tr>
+<tr>
+<td>UDP connection</td>
+<td>Receive data from the quadcopter</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
@@ -63,7 +68,7 @@ The communication between the smartphone and the Simulink simulation goes via UD
 </tr>
 <tr>
 <td>UDP connection VR</td>
-<td>Establish communication between VR app and Simulink</td>
+<td>Establish communication between VR app(using C++) and Simulink</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
