@@ -1,0 +1,12 @@
+HElikopter UDP Protocol
+
+Variables	|	Format		|	Size		|
+---------------------------------------------
+Package #	|	Integer		|	4 Byte		|
+Timestamp	|	Integer		|	4 Byte		|
+Acc X		|	Float		|	8 Byte		|
+Acc Y		|	Float		|	8 Byte		|
+Acc	Z		|	Float		|	8 Byte		|
+Grad X		|	Float		|	8 Byte		|
+Grad Y		|	Float		|	8 Byte		|
+Grad Z		|	Float		|	8 Byte		|
