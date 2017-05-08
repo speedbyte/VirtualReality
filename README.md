@@ -24,7 +24,7 @@ The communication between the smartphone and the Simulink simulation goes via UD
 <tr>
 <td>C++ Model for Position</td>
 <td>Create model to calculate position based on sensor data</td>
-<td>x</td>
+<td>This is done using blueprint in Unreal Engine</td>
 </tr>
 <tr>
 <td>UDP connection</td>
@@ -49,32 +49,32 @@ The communication between the smartphone and the Simulink simulation goes via UD
 <tr>
 <td>UDP connection</td>
 <td>Receive data from the quadcopter</td>
-<td>&nbsp;</td>
+<td>In Progress...</td>
 </tr>
 <tr>
 <td>Android App</td>
 <td>Create first Android VR app running on a Smartphone (Unreal Engine 4)</td>
-<td>&nbsp;</td>
+<td>In Progress...</td>
 </tr>
   <tr>
 <td>Quadrocopter model</td>
 <td>Create new Quadrocopter model (CAD)</td>
-<td>&nbsp;</td>
+<td>Basic Model done, the model is created using unreal</td>
 </tr>
 <tr>
 <td>Quadrocopter model</td>
 <td>Include Quadrocopter model to VR app</td>
-<td>&nbsp;</td>
+<td>Basic Model done, including animations of the quadcopter propellers</td>
 </tr>
 <tr>
 <td>UDP connection VR</td>
 <td>Establish communication between VR app(using C++) and Simulink</td>
-<td>&nbsp;</td>
+<td>In Progress...</td>
 </tr>
 <tr>
 <td>Include C++ model</td>
 <td>Include the C++ model into the VR app</td>
-<td>&nbsp;</td>
+<td>In Progress...</td>
 </tr>
   <tr>
 <td>...</td>
