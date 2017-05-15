@@ -24,22 +24,22 @@ The communication between the smartphone and the Simulink simulation goes via UD
 <tr>
 <td>C++ Model for Position</td>
 <td>Create model to calculate position based on sensor data</td>
-<td>This is done using blueprint in Unreal Engine</td>
+<td>This is done using blueprint in Unreal Engine, the accelerations will be received and using tick to calculate the velocity in 3D</td>
 </tr>
 <tr>
 <td>UDP connection</td>
 <td>Receive data from Simulink model</td>
-<td>&nbsp;</td>
+<td>Done using python, can received data from any sender...</td>
 </tr>
 <tr>
 <td>UDP connection</td>
 <td>Send data to Simulink model</td>
-<td></td>
+<td>In Progress... </td>
 </tr>
   <tr>
 <td>UDP connection</td>
 <td>Control Simulink model from C++</td>
-<td></td>
+<td>tbd</td>
 </tr>
 <tr>
 <td>UDP connection</td>
@@ -49,7 +49,7 @@ The communication between the smartphone and the Simulink simulation goes via UD
 <tr>
 <td>UDP connection</td>
 <td>Receive data from the quadcopter</td>
-<td>In Progress...</td>
+<td>C++ functions are provided by Markus, the integration to UE4 blueprint is in progress</td>
 </tr>
 <tr>
 <td>Android App</td>
