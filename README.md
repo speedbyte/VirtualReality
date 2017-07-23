@@ -85,18 +85,22 @@ The communication between the smartphone and the Simulink simulation goes via UD
 </table>
 <p>&nbsp;</p>
 
-<h2>Unreal Model:</h2>
-<h1>-Block Diagram-</h1>
+<h1>Unreal Model:</h1>
+<h2>-Block Diagram-</h2>
 ![alt tag](img/Unreal_BlockDiagram.png)
 <p>-&nbsp;</p>
 
-<h1>-Enviroment Level-</h1>
+<h2>-Enviroment Level-</h2>
 ![alt tag](img/Unreal_EnvLevel.png)
 <p>-&nbsp;</p>
 
-<h1>-Character Level-</h1>
+<h2>-Character Level-</h2>
 ![alt tag](img/Unreal_CharLevel.png)
 <p>-&nbsp;</p>
+
+<h1>Real Time Path Plot:</h1>
+<h2>-Block Diagram-</h2>
+![alt tag](img/RealTime_Path.png)
 
 <h2>Build Info</h2>
 <p>Project created with Visual Studio 2013<br>
