@@ -1,5 +1,6 @@
 #include "UDPConroller.h"
 
+<<<<<<< HEAD
 #include <iostream>
 #include <iomanip>
 #include <chrono>
@@ -64,3 +65,14 @@ std::string UDPController::make_daytime_string()
 	std::time_t now_c = std::chrono::system_clock::to_time_t(now);
 	return std::ctime(&now_c);
 }
+=======
+
+UDPConroller::UDPConroller()
+{
+}
+
+
+UDPConroller::~UDPConroller()
+{
+}
+>>>>>>> refs/heads/master

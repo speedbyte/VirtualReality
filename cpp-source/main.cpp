@@ -1,10 +1,14 @@
+<<<<<<< HEAD
 #include <boost\lambda\lambda.hpp>
 #include <boost/thread.hpp>
+=======
+>>>>>>> refs/heads/master
 #include <stdio.h>
 #include <string>
 #include <chrono>
 #include <iostream>
 #include <thread>
+<<<<<<< HEAD
 
 #include <iterator>
 #include <algorithm>
@@ -63,13 +67,45 @@ void main(){
 	std::this_thread::sleep_for(std::chrono::milliseconds(50));
 	
 	h->updatePos(32, 15, 16, 0.02, 0.01, 0.1);
+=======
+#include <windows.h>
+
+
+#include "Postrack.h"
+#include "UDPConroller.h"
+
+void main(){
+
+	Postrack* h = new Postrack();
+
+	h->updatePos(10);
+	std::this_thread::sleep_for(std::chrono::microseconds(10));
+	h->updatePos(300);
+	std::this_thread::sleep_for(std::chrono::milliseconds(1));
+	h->updatePos(40);
+
+	std::this_thread::sleep_for(std::chrono::milliseconds(2));
+
+	h->updatePos(-100);
+	std::this_thread::sleep_for(std::chrono::microseconds(100));
+	h->updatePos(-50);
+
+	std::this_thread::sleep_for(std::chrono::milliseconds(10));
+	h->updatePos(-500);
+	std::this_thread::sleep_for(std::chrono::milliseconds(5));
+	h->updatePos(320);
+>>>>>>> refs/heads/master
 
 	h->printPath();
 
 	char x;
 
+<<<<<<< HEAD
 	// keeps the window open
 	std::cin >> x;
 
 	io_service.stop();
+=======
+	std::cin >> x;
+>>>>>>> refs/heads/master
 }

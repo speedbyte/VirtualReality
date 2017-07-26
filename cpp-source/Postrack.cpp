@@ -16,6 +16,7 @@ Postrack::~Postrack()
 
 }
 
+<<<<<<< HEAD
 bool Postrack::updatePos(double accx, double accy, double accz, double rotx, double roty, double rotz){
 
 	KinematicData newPoint;
@@ -26,16 +27,28 @@ bool Postrack::updatePos(double accx, double accy, double accz, double rotx, dou
 	newPoint.rot_x = rotx;
 	newPoint.rot_y = roty;
 	newPoint.rot_z = rotz;
+=======
+bool Postrack::updatePos(double acc){
+
+	KinematicData newPoint;
+
+	newPoint.acc = acc;
+>>>>>>> refs/heads/master
 	newPoint.newtime = get_time::now();
 
 	if (this->path.size() > 0){
 		newPoint.oldTime = this->path.back().newtime;
+<<<<<<< HEAD
 		newPoint.initVel[0] = this->path.back().actVel[0];
 		newPoint.initVel[1] = this->path.back().actVel[1];
 		newPoint.initVel[2] = this->path.back().actVel[2];
 		newPoint.pos_x = this->path.back().pos_x;
 		newPoint.pos_y = this->path.back().pos_y;
 		newPoint.pos_z = this->path.back().pos_z;
+=======
+		newPoint.initVel = this->path.back().actVel;
+		newPoint.pos_x = this->path.back().pos_x;
+>>>>>>> refs/heads/master
 	}
 	else{
 		newPoint.oldTime = get_time::now();
@@ -54,15 +67,21 @@ bool Postrack::updatePos(double accx, double accy, double accz, double rotx, dou
 
 bool Postrack::calcTime(KinematicData &h){
 
+<<<<<<< HEAD
 	if (h.newtime >= h.oldTime){
 		h.diff = std::chrono::duration_cast<mis>(h.newtime - h.oldTime);
 		return true;
 	}
 	else return false;
+=======
+	h.diff = std::chrono::duration_cast<mis>(h.newtime - h.oldTime);
+	return true;
+>>>>>>> refs/heads/master
 }
 
 bool Postrack::calcPos(KinematicData &h){
 
+<<<<<<< HEAD
 	if (h.diff.count() >= 0){
 		h.actVel[0] = this->getVel(h.diff.count(), h.initVel[0], h.acc[0]);
 		h.actVel[1] = this->getVel(h.diff.count(), h.initVel[1], h.acc[1]);
@@ -76,15 +95,28 @@ bool Postrack::calcPos(KinematicData &h){
 		return true;
 	}
 	else return false;
+=======
+	h.actVel = this->getVel(h.diff.count(), h.initVel, h.acc);
+	h.trans_x = this->getMov(h.diff.count(), h.actVel);
+	h.pos_x += h.trans_x;
+
+	return true;
+>>>>>>> refs/heads/master
 }
 
 double Postrack::getVel(double time, double initVel, double acc){
 
 	double velocity = 0;
 
+<<<<<<< HEAD
 	velocity = (acc * (time / 1000000)) + initVel;
 	
 	return velocity;
+=======
+	velocity = (acc * time) + initVel;
+	
+	return velocity/1000;
+>>>>>>> refs/heads/master
 }
 
 double Postrack::getMov(double time, double actVel){
@@ -106,6 +138,7 @@ bool Postrack::printPath(){
 	for (std::vector<KinematicData>::const_iterator i = this->path.begin(); i != this->path.end(); ++i)
 	{
 		std::cout << "Time = " << i->diff.count() * std::chrono::milliseconds::period::num / std::chrono::milliseconds::period::den << " ms";
+<<<<<<< HEAD
 		std::cout << "\tAcc_X = " << i->acc[0] << " mm/s^2";
 		std::cout << "\tPos_X = " << i->pos_x << "mm";
 		std::cout << std::endl;
@@ -114,6 +147,10 @@ bool Postrack::printPath(){
 		std::cout << std::endl;
 		std::cout << "\t\tAcc_Z = " << i->acc[2] << " mm/s^2";
 		std::cout << "\tPos_Z = " << i->pos_z << "mm";
+=======
+		std::cout << "\tAcceleration = " << i->acc << " mm/s^2";
+		std::cout << "\tPosition_X = " << i->pos_x << "mm";
+>>>>>>> refs/heads/master
 		std::cout << std::endl;
 	}
 

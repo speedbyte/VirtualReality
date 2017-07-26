@@ -1,4 +1,5 @@
 #pragma once
+<<<<<<< HEAD
 #include <iostream>
 #include <string>
 #include <boost/array.hpp>
@@ -33,5 +34,15 @@ private:
 
 	std::string data;
 
+=======
+
+
+
+class UDPConroller
+{
+public:
+	UDPConroller();
+	~UDPConroller();
+>>>>>>> refs/heads/master
 };
 

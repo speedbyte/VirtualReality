@@ -1,9 +1,14 @@
 #pragma once
 #include <vector>
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/heads/master
 #include <chrono>
 
 struct KinematicData;
 
+<<<<<<< HEAD
 // xml_summary_tag.cpp
 // compile with: /LD /clr /doc
 // post-build command: xdcmake xml_summary_tag.dll
@@ -26,10 +31,24 @@ public:
 	std::vector<KinematicData> getPath();
 
 	/// Prints the whole path to std::cout
+=======
+class Postrack
+{
+public:
+	
+	Postrack();
+	~Postrack();
+
+	bool updatePos(double acc);
+	
+	std::vector<KinematicData> getPath();
+
+>>>>>>> refs/heads/master
 	bool printPath();
 
 private:
 	
+<<<<<<< HEAD
 	/// Path of the object to track
 	std::vector<KinematicData> path;
 
@@ -46,12 +65,22 @@ private:
 	double getVel(double time, double initVel, double acc);
 
 	/// Help function that will calculate the movement based on velocity and time
+=======
+	std::vector<KinematicData> path;
+	std::chrono::steady_clock::time_point start;
+
+	bool calcTime(KinematicData &h);
+	bool calcPos(KinematicData &h);
+
+	double getVel(double time, double initVel, double acc);
+>>>>>>> refs/heads/master
 	double getMov(double time, double actVel);
 
 };
 
 struct KinematicData
 {
+<<<<<<< HEAD
 	KinematicData(){
 		for (int i = 0; i < 3; i++){
 			acc[i] = 0.0;
@@ -66,6 +95,9 @@ struct KinematicData
 	std::chrono::steady_clock::time_point newtime;
 	std::chrono::microseconds diff;
 	
+=======
+	int    typ;         // Achstyp translatorisch (TRANS_X, TRANS_Y, TRANS_Z) oder rotatorisch (ROT_X, ROT_Y, ROT_Z)
+>>>>>>> refs/heads/master
 	double trans_x = 0;     // Translation um trans_x in mm
 	double trans_y = 0;     // Translation um trans_y in mm
 	double trans_z = 0;     // Translation um trans_z in mm
@@ -73,10 +105,23 @@ struct KinematicData
 	double rot_y = 0;       // Rotation um rot_y in rad
 	double rot_z = 0;       // Rotation um rot_z in rad
 
+<<<<<<< HEAD
 	double acc[3];			// Acceleration in mm/s²
 	double initVel[3];		// Velocity in mm/s
 	double actVel[3];		// Velocity in mm/s
 	double pos_x = 0;					// Position on x-axis in mm 
 	double pos_y = 0;					// Position on y-axis in mm
 	double pos_z = 0;					// Position on z-axis in mm
+=======
+	std::chrono::steady_clock::time_point oldTime;
+	std::chrono::steady_clock::time_point newtime;
+	std::chrono::microseconds diff;
+
+	double acc = 0;			// Acceleration in mm/s²
+	double initVel = 0;		// Velocity in mm/s
+	double actVel = 0;		// Velocity in mm/s
+	double pos_x = 0;		// Position on x-axis in mm 
+	double pos_y = 0;		// Position on y-axis in mm
+	double pos_z = 0;		// Position on z-axis in mm
+>>>>>>> refs/heads/master
 };

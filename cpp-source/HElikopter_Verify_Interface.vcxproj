@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<<<<<<< HEAD
   <Import Project="..\packages\cppunit.1.12.1.4\build\native\cppunit.props" Condition="Exists('..\packages\cppunit.1.12.1.4\build\native\cppunit.props')" />
+=======
+>>>>>>> refs/heads/master
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -39,9 +42,13 @@
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
+<<<<<<< HEAD
   <PropertyGroup Label="UserMacros">
     <NuGetPackageImportStamp>ff1b07f9</NuGetPackageImportStamp>
   </PropertyGroup>
+=======
+  <PropertyGroup Label="UserMacros" />
+>>>>>>> refs/heads/master
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
@@ -50,17 +57,29 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
+<<<<<<< HEAD
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>false</SDLCheck>
       <AdditionalIncludeDirectories>C:\boost_1_63_0</AdditionalIncludeDirectories>
+=======
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+>>>>>>> refs/heads/master
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+<<<<<<< HEAD
       <AdditionalLibraryDirectories>C:\boost_1_63_0\stage\lib</AdditionalLibraryDirectories>
+=======
+>>>>>>> refs/heads/master
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -83,13 +102,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Postrack.h" />
+<<<<<<< HEAD
     <ClInclude Include="quadcopter_dynamics.h" />
     <ClInclude Include="UDPClient.h" />
+=======
+>>>>>>> refs/heads/master
     <ClInclude Include="UDPConroller.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Postrack.cpp" />
+<<<<<<< HEAD
     <ClCompile Include="UDPClient.cpp" />
     <ClCompile Include="UDPConroller.cpp" />
   </ItemGroup>
@@ -107,4 +130,11 @@
     <Error Condition="!Exists('..\packages\cppunit.1.12.1.4\build\native\cppunit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cppunit.1.12.1.4\build\native\cppunit.props'))" />
     <Error Condition="!Exists('..\packages\cppunit.1.12.1.4\build\native\cppunit.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cppunit.1.12.1.4\build\native\cppunit.targets'))" />
   </Target>
+=======
+    <ClCompile Include="UDPConroller.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+>>>>>>> refs/heads/master
 </Project>
