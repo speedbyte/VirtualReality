@@ -24,7 +24,7 @@ The communication between the smartphone and the Simulink simulation goes via UD
 <tr>
 <td>C++ Model for Position</td>
 <td>Create model to calculate position based on sensor data</td>
-<td>This is done using blueprint in Unreal Engine, the accelerations will be received and using tick to calculate the velocity in 3D</td>
+<td>This is done using blueprint in Unreal Engine, the accelerations is being received and using tick to calculate the velocity in 3D</td>
 </tr>
 <tr>
 <td>UDP connection</td>
@@ -39,12 +39,12 @@ The communication between the smartphone and the Simulink simulation goes via UD
   <tr>
 <td>UDP connection</td>
 <td>Control Simulink model from C++</td>
-<td>tbd</td>
+<td>Frame format already defined and agreed with Simulink Team </td>
 </tr>
 <tr>
 <td>UDP connection</td>
 <td>Establish protocol based connection between Simulink model and C++ program</td>
-<td>Isn't this overlapped with the previous tasks</td>
+<td>This is not overlapped with the previous tasks</td>
 </tr>
 <tr>
 <td>UDP connection</td>
@@ -54,7 +54,7 @@ The communication between the smartphone and the Simulink simulation goes via UD
 <tr>
 <td>Android App</td>
 <td>Create first Android VR app running on a Smartphone (Unreal Engine 4)</td>
-<td>In Progress...</td>
+<td>Done</td>
 </tr>
   <tr>
 <td>Quadrocopter model</td>
@@ -84,6 +84,23 @@ The communication between the smartphone and the Simulink simulation goes via UD
 </tbody>
 </table>
 <p>&nbsp;</p>
+
+<h1>Unreal Model:</h1>
+<h2>-Block Diagram-</h2>
+![alt tag](img/Unreal_BlockDiagram.png)
+<p>-&nbsp;</p>
+
+<h2>-Enviroment Level-</h2>
+![alt tag](img/Unreal_EnvLevel.PNG)
+<p>-&nbsp;</p>
+
+<h2>-Character Level-</h2>
+![alt tag](img/Unreal_CharLevel.PNG)
+<p>-&nbsp;</p>
+
+<h1>Real Time Path Plot:</h1>
+<h2>-Block Diagram-</h2>
+![alt tag](img/RealTime_Path.PNG)
 
 <h2>Build Info</h2>
 <p>Project created with Visual Studio 2013<br>
