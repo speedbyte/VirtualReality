@@ -88,19 +88,33 @@ The communication between the smartphone and the Simulink simulation goes via UD
 <h1>Unreal Model:</h1>
 <h2>-Block Diagram-</h2>
 ![alt tag](img/Unreal_BlockDiagram.png)
-<p>-&nbsp;</p>
 
-<h2>-Enviroment Level-</h2>
+
+<p>The block diagram describes the architecture of the visual simulation of Unreal Engine 4. The environment(or level in Unreal Engine) contains a representation of the user, which will provide basic movements such as go forward, turn left, turn right...
+Beside that, the level also contains Actors, which is interactable objects. The interacting function such as collitions or control or user's actions will create an event that triggers the movement of the object according to physical principles.<br>
+Moreover, Unreal can also send/receive UDP/TCP data packages from outside with the help of local C++ functions.&nbsp;</p>
+
+
+<h2>-Enviroment-</h2>
 ![alt tag](img/Unreal_EnvLevel.PNG)
-<p>-&nbsp;</p>
+<p>The image shows how the environment looks like.&nbsp;</p>
 
-<h2>-Character Level-</h2>
+<h2>-Character-</h2>
 ![alt tag](img/Unreal_CharLevel.PNG)
-<p>-&nbsp;</p>
+<p>The image shows how the environment looks like.&nbsp;</p>
 
 <h1>Real Time Path Plot:</h1>
 <h2>-Block Diagram-</h2>
 ![alt tag](img/RealTime_Path.PNG)
+<p>The block diagram depicts the architecture of the model for printing the current Quadracopter path.
+
+The code is showed bellow:
+&nbsp;</p>
+
+![alt tag](img/PathPlot_Header.png)
+![alt tag](img/PathPlot.png)
+
+  
 
 <h2>Build Info</h2>
 <p>Project created with Visual Studio 2013<br>
